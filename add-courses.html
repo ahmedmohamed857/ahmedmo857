@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body class="add-course-page">
+    
+    <header id="top">
+        <a href="index.html" class="logo">Ahemd</a>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="my-courses.html">My Courses</a>
+            <a href="add-course.html" class="active">Add Courses</a>
+            <a href="contact.html">Contact US</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="form-container">
+            <form id="addCourseForm">
+                <h2>Add Course</h2>
+                
+                <div class="input-group">
+                    <label for="courseName">Course Name</label>
+                    <input type="text" id="courseName" placeholder="Enter course name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="instructorName">Instructor</label>
+                    <input type="text" id="instructorName" placeholder="Enter instructor name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="courseSchedule">Schedule</label>
+                    <input type="text" id="courseSchedule" placeholder="e.g. Sun & Tue - 10:00 AM" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="creditHours">Credit Hours</label>
+                    <input type="number" id="creditHours" placeholder="Enter credit hours" required min="1">
+                </div>
+                
+                <div class="input-group">
+                    <label for="courseNotes">Notes</label>
+                    <textarea id="courseNotes" placeholder="Any additional notes..." rows="5"></textarea>
+                </div>
+                
+                <button type="submit" class="add-btn">Add Course</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

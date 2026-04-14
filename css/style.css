@@ -1,0 +1,471 @@
+*{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(pexels-nammau-14348173.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 80px; 
+}
+
+header{
+    background-color: #2c3e50b3; 
+    backdrop-filter: blur(7px); 
+    width: 100%;
+    position: fixed;
+    z-index:999;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 10% !important;
+    top: 0;
+}
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* ترتيب اللوجو فوق الروابط */
+        padding: 10px;
+    }
+
+    .navigation {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navigation a {
+        padding-left: 0; 
+        font-size: 0.9em;
+    }
+    section {
+        padding-top: 20px;
+    }
+}
+.navigation {
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);}
+.logo{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6em;
+    color: rgba(27, 23, 23, 0.432);
+}
+.navigation {
+    display: flex;
+    flex-direction: row !important; /* يجبر العناصر على البقاء في صف واحد */
+    flex-wrap: nowrap !important;   /* يمنع نزول الروابط لسطر جديد */
+    align-items: center;
+    justify-content: flex-end;      /* يحاذي الروابط لليمين بجانب اللوجو */
+    gap: 15px;                      /* مسافة ثابتة بين الروابط */
+}
+.navigation a{
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 25px;
+    color: rgb(155, 198, 197);
+}
+.navigation a:hover{
+    color: rgb(8, 37, 43);
+
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(pexels-nammau-14348173.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main h2{
+    color: #2c3e50; 
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.main h2 span {
+    color: #4a6741; 
+    display: block; 
+}
+.main p {
+    color: #444; 
+    font-weight: 500;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.2); 
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 5px;}
+    .main-btn{
+        color: #ffffff;
+        background-color: #2c3e50;
+        border-radius: 15px;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0.9375em 2.1875em;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        margin-left: 38px;
+        margin-top: 15px;
+        transition: 0.7s ease;
+    }
+    .main-btn:hover {
+        background-color: #4a6741;
+        transform: scale(1.1);
+    }
+    .social-icons a{
+        color: azure;
+        margin-left: 33px;
+        font-size: 1.2em;
+        padding-right:px;
+    }
+    /* تنسيق قسم التواصل ليكون في المنتصف */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+/* تحريك الجدول لأسفل بعيداً عن الفورم أو العناوين */
+.courses-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 60px; 
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.contact-section {
+    padding-top: 100px; 
+}
+.contact-form {
+    background-color: #293949b3; 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(41, 36, 36, 0.465);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.134);
+}
+/* 1. تعديل الحقول لتكون الكتابة بداخلها بيضاء */
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* خلفية فاتحة شفافة أفضل */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #ffffff; /* تم تغيير لون الخط للأبيض */
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    color: #ffffff !important;
+}
+
+/* 2. تعديل لون الـ Placeholder (النص المؤقت) */
+.input-group input::placeholder, 
+.input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5); 
+}
+
+/* 3. تعديل الزر ليكون واضحاً وبالخط الأبيض */
+.send-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #050d096a; /* لون أزرق زاهي ليناسب التصميم */
+    color: #b6b6b6; /* لون خط الزر أبيض */
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background-color: #82b740af;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(75, 154, 74, 0.609);
+}   
+.courses-section {
+    padding: 60px 20px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.936);
+}
+
+.main-title { font-size: 2.5rem; margin-bottom: 5px; }
+.sub-title { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+
+.courses-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.courses-table th, .courses-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.courses-table th {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.courses-table tbody tr:hover {
+    background: rgba(242, 241, 241, 0.1);
+    transition: 0.3s;
+}
+/* --- Add Course Page Specific Styles --- */
+
+/* 1. Global Page Style */
+.add-course-page {
+    background-color: #f7f7f754; /* Dark background to match the image */
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 2. Container to center the form */
+.form-container {
+    flex-grow: 1; /* Pushes everything up if page is too short */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* 3. The Transparent Form Card */
+#addCourseForm {
+    background-color: rgba(0, 0, 0, 0.567); /* Slight transparency on white */
+    backdrop-filter: blur(5px); /* Optional: blur background slightly for "Glass" effect */
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px; /* Limits maximum width */
+    text-align: center;
+}
+
+#addCourseForm h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+}
+
+/* 4. Input Fields styling */
+.input-group {
+    text-align: left; /* Align labels left */
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00000074; 
+    font-size: 0.95rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(10, 2, 2, 0.454); /* Slightly lighter background */
+    border: 1px solid rgba(12, 4, 4, 0.44); /* Subtle border */
+    border-radius: 6px;
+    color: rgba(1, 0, 0, 0.423);
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.input-group textarea {
+    resize: vertical; /* Allow user to resize height only */
+}
+
+/* Change input styles on focus */
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #0208116c; /* Blue border on focus */
+    background-color: rgba(0, 0, 0, 0.436);
+}
+
+/* 5. The Blue Button */
+.add-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: hsla(213, 100%, 2%, 0.546); /* Blue color matching the button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.add-btn:hover {
+    background-color: #a5b637d0; 
+}
+/* --- Media Queries for Responsiveness --- */
+
+/* 1. للشاشات المتوسطة (أجهزة التابلت) */
+@media screen and (max-width: 768px) {
+    .main-title { font-size: 1.8rem; }
+    .sub-title { font-size: 1rem; }
+    
+    .contact-form, #addCourseForm {
+        width: 90%; /* تكبير الفورم ليأخذ مساحة أكبر على الشاشة الصغيرة */
+        padding: 20px;
+    }
+
+    /* تحويل الجدول إلى "بطاقات" ليسهل تصفحه */
+    .courses-table thead {
+        display: none; /* إخفاء رأس الجدول */
+    }
+
+    .courses-table, .courses-table tbody, .courses-table tr, .courses-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .courses-table tr {
+        margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+    }
+
+    .courses-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .courses-table td::before {
+        content: attr(data-label); 
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #0d6efd;
+    }
+}
+@media screen and (max-width: 480px) {
+    .navigation {
+        display: flex;
+        flex-direction: column; /* جعل أزرار النافبار فوق بعضها */
+        gap: 10px;
+    }
+
+    .send-btn, .add-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+@media screen and (max-width: 768px) {
+    /* تصغير حجم اللوجو وتوسيطه */
+    .header .logo {
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* تحويل القائمة لصفوف مرنة */
+    .navigation {
+        display: flex;
+        flex-wrap: wrap; /* للسماح للعناصر بالنزول لسطر جديد إذا ضاق المكان */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navigation a {
+        font-size: 14px; /* تصغير الخط ليناسب الشاشة */
+        padding: 5px 10px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .courses-table thead {
+        display: none; /* إخفاء العناوين العلوية */
+    }
+
+    .courses-table, .courses-table tbody, .courses-table tr, .courses-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .courses-table tr {
+        margin-bottom: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .courses-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* إظهار اسم العمود بجانب المعلومة */
+    .courses-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+}
+@media screen and (max-width: 768px) {
+    header {
+        /* تقليل الحشو الجانبي للهيدر في الموبايل */
+        padding: 10px 5% !important;
+        flex-direction: column; /* ترتيب اللوجو فوق الروابط */
+    }
+
+    .logo {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        display: flex;
+        flex-wrap: wrap; /* السماح للروابط بالنزول لسطر جديد */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navigation a {
+        padding-left: 10px; /* تقليل المسافات بين الروابط */
+        font-size: 0.9em;
+    }
+}
+
